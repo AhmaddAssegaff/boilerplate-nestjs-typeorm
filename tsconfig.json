@@ -16,6 +16,21 @@
     "baseUrl": "./",
     "incremental": true,
     "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "paths": {
+      "@app/*": ["src/*"],
+      "@config/*": ["src/config/*"],
+      "@core/*": ["src/core/*"],
+      "@common/*": ["src/core/common/*"],
+      "@exceptions/*": ["src/core/exceptions/*"],
+      "@filters/*": ["src/core/filters/*"],
+      "@modules/*": ["src/modules/*"],
+      "@env/*": ["src/env/*"],
+      "@database/*": ["src/modules/database/*"],
+      "@products/*": ["src/modules/products/*"],
+      "@users/*": ["src/modules/users/*"],
+      "@auth/*": ["src/modules/auth/*"],
+      "@jwt/*": ["src/modules/jwt/*"]
+    }
   }
 }
