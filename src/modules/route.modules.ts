@@ -1,4 +1,5 @@
 import { DynamicModule, ForwardReference, Module, Type } from '@nestjs/common';
+import { AuthModule } from '@modules/auth/auth.module';
 
 @Module({})
 export class RouterModule {
@@ -9,8 +10,7 @@ export class RouterModule {
       | Promise<DynamicModule>
       | ForwardReference<any>
     )[] = [];
-    imports.push();
-    // import module
+    imports.push(AuthModule);
     return {
       module: RouterModule,
       providers: [],

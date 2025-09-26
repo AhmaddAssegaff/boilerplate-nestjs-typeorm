@@ -29,6 +29,13 @@ import * as Joi from 'joi';
         SW_PASSWORD: Joi.string().required(),
         SW_PATH: Joi.string().required(),
         TZ: Joi.string().required(),
+        AUTH_JWT_ACCESS_TOKEN_SECRET_KEY: Joi.string().required(),
+        AUTH_JWT_ACCESS_TOKEN_EXPIRES_IN: Joi.string().required(),
+        AUTH_JWT_REFRESH_TOKEN_SECRET_KEY: Joi.string().required(),
+        AUTH_JWT_REFRESH_TOKEN_EXPIRES_IN: Joi.string().required(),
+        AUTH_JWT_PAYLOAD_ENCRYPT: Joi.boolean().required(),
+        AUTH_JWT_ENCRYPTION_KEY: Joi.string().required(),
+        AUTH_JWT_ENCRYPTION_IV: Joi.string().required(),
       }),
       validationOptions: {
         abortEarly: true,
@@ -36,5 +43,6 @@ import * as Joi from 'joi';
       },
     }),
   ],
+  exports: [ConfigModule],
 })
 export class CommonModule {}
