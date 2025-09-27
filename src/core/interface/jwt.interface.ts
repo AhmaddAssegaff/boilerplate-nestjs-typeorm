@@ -1,4 +1,4 @@
-import { userRole } from '@core/constants/user.constants';
+import { UserRole } from '@core/constants/user.constants';
 
 export interface Token {
   refreshToken: string;
@@ -14,7 +14,7 @@ export interface JwtPayloadEncrypted {
 export interface JwtPayload {
   sub: string;
   username: string;
-  role: userRole;
+  role: UserRole;
   iat?: number;
   exp?: number;
 }
