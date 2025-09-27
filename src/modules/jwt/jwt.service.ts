@@ -72,10 +72,7 @@ export class JwtTokenService {
     );
   }
 
-  private async verifyToken(
-    token: string,
-    secret: string,
-  ): Promise<JwtPayload> {
+  private async verifyToken(token: string, secret: string) {
     if (!token) {
       throw new UnauthorizedException('Token not provided');
     }
